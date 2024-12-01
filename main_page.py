@@ -2,7 +2,17 @@ import streamlit as st
 
 def main_page():
     st.title("ÖMER MANAV")
-    # st.image("assets\profile.jpeg", use_column_width=True)
+    
+    with open("omermanavcv.pdf", "rb") as file:
+        resume = file.read()
+    
+    st.download_button(
+        label = "Download CV",
+        data = resume,
+        file_name = "Omer_Manav_CV.pdf",
+        mime = "application/pdf" 
+    )
+
     st.title("About Me")
     st.write("""
         I am a 3rd year Software Engineering student at Üsküdar University.
