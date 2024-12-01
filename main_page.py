@@ -3,7 +3,7 @@ import streamlit as st
 def main_page():
     st.title("ÖMER MANAV")
     
-    with open("omermanavcv.pdf", "rb") as file:
+    with open("assets/omermanavcv.pdf", "rb") as file:
         resume = file.read()
     
     st.download_button(
